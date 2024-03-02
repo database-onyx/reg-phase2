@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter PIN</title>
+    <link rel="stylesheet" href="assets/css/mod.css" />
+</head>
+
+<body>
+    <section class="qr_section">
+        <div class="qr_main_div">
+            <form class="form" action="/" method="post">
+                <p class="qr_title">Event pin</p>
+                <div class="qr_input-div">
+                    <div class="qr_label_div">
+                        <img src="assets/svg/qrcode.svg" alt="" />
+                        <label for="name">Enter the Pin here</label>
+                    </div>
+                    <div class="qr_inner_div">
+                        <input type="text" id="pin" name="pin" required />
+                    </div>
+                </div>
+
+                <div class="Qr_form_button_div">
+                    <input id="Qr_button" type="submit" name="qr" value="Enter">
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="assets/js/mod.js"></script>
+</body>
+
+</html>
