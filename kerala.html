@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register to get photos</title>
+
+    <!-- permissions -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <!-- WebcamJS CSS -->
+    <!-- WebcamJS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ericblade/camera-capture-stream@latest/dist/browser-camera-capture-stream.js"></script>
+    <!-- font-awesome -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/ico"
+      href="./assets/image/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="180x180"
+      href="assets/image/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/image/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/image/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="assets/css/mod.css" />
+  </head>
+
+  <body>
+    <section class="desc_section">
+      <div class="desc-div">
+        <div class="desc">
+          <h3 class="desc_title">Vengatesh & Sridevi's Wedding</h3>
+
+          <div class="content_div">
+            <img src="assets/svg/camera.svg" alt="" />
+
+            <h5 class="desc_content">Click Selfie and Get Photos</h5>
+          </div>
+
+          <div class="content_div">
+            <img src="assets/svg/check.svg" alt="" />
+            <h5 class="desc_content">Photos must be captured at present</h5>
+          </div>
+
+          <div class="content_div">
+            <img src="assets/svg/check.svg" alt="" />
+            <h5 class="desc_content">Individual selfie</h5>
+          </div>
+
+          <div class="content_div">
+            <img src="assets/svg/check.svg" alt="" />
+            <h5 class="desc_content">Good lighting</h5>
+          </div>
+
+          <div class="content_div">
+            <img src="assets/svg/x.svg" alt="" />
+            <h5 class="desc_content">Sunglasses, masks, caps</h5>
+          </div>
+
+          <div class="content_div">
+            <img src="assets/svg/x.svg" alt="" />
+
+            <h5 class="desc_content">Group selfies</h5>
+          </div>
+
+          <div class="content_div">
+            <img src="assets/svg/x.svg" alt="" />
+
+            <h5 class="desc_content">Eyes closed</h5>
+          </div>
+
+          <div class="content_div">
+            <img src="assets/svg/x.svg" alt="" />
+
+            <h5 class="desc_content">Filters</h5>
+          </div>
+
+          <div class="desc_arrow pulse-button">
+            <p>Register</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--====================================================-->
+
+    <section class="form-section">
+      <div class="form-div">
+        <div class="form-container">
+          <p class="title">Register</p>
+          <form
+            class="form"
+            action="/kerala"
+            id="reg-page"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="input-div">
+              <div class="label_div">
+                <img src="assets/svg/user.svg" alt="" />
+                <label for="name">Enter your Name</label>
+              </div>
+              <input type="text" name="name" id="Enter_your_name" required />
+            </div>
+            <div class="input-div">
+              <div class="label_div">
+                <img src="assets/svg/whatsapplogo.svg" alt="" />
+
+                <label for="Whatsapp Number">Whatsapp Number</label>
+              </div>
+              <input
+                type="text"
+                id="Whatsapp_Number"
+                name="phonenumber"
+                pattern="[0-9]*"
+                required
+              />
+            </div>
+            <input
+              type="hidden"
+              name="capturedImage"
+              id="capturedImageInput"
+              value=""
+            />
+            <input
+              type="hidden"
+              id="capturedImageMimeType"
+              name="capturedImageMimeType"
+              value="image/jpeg"
+            />
+
+            <div class="form_button_div">
+              <button id="show" class="cus pulse-button" type="button">
+                Open Camera
+              </button>
+              <input
+                id="home-get"
+                class="button submit-button"
+                type="submit"
+                value="Get Photos"
+                style="display: none !important"
+              />
+            </div>
+          </form>
+          <div class="form_arrow">
+            <img src="assets/svg/arrowleft.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--====================================================-->
+    <section class="cam_section popup" id="popup">
+      <div class="cam_section_div">
+        <div class="cam">
+          <h3 class="cam_title Capture_face">Capture your Face</h3>
+
+          <div class="content_div keep_face">
+            <h5 class="cam_content">
+              Keep your face in Center and Press Capture
+            </h5>
+          </div>
+          <div class="gsap_loading_div">
+            <svg
+              width="443"
+              height="443"
+              viewBox="0 0 443 443"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="loading_cir"
+            >
+              <circle
+                id="loadingcircle"
+                cx="221.5"
+                cy="221.5"
+                r="220"
+                stroke="#ffae42"
+                stroke-width="5"
+              />
+            </svg>
+
+            <div class="cam_div frame">
+              <img
+                id="capturedImage"
+                style="display: none"
+                alt="Captured Image"
+              />
+              <div id="camera-container" class="circular-camera">
+                <video id="camera" playsinline autoplay muted></video>
+                <img
+                  id="overlayImage"
+                  src="assets/image/success.png"
+                  alt="Overlay Image"
+                  style="
+                    display: none;
+                    opacity: 1;
+                    position: absolute;
+                    top: 20px;
+                    left: 25px;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="buttons" id="imageButtons">
+            <button class="action cam-btn pulse-button" id="takePhotoBtn">
+              <img src="assets/svg/camerablack.svg" alt="" />
+            </button>
+            <button
+              class="action retake-btn"
+              id="retakePhotoBtn"
+              style="display: none"
+            >
+            <img
+              class="arrowclockwise"
+              src="assets/svg/arrowclockwise.svg"
+              alt=""
+            />
+              <p class="retake_photo_P">Retake Photo</p>
+            </button>
+            <button
+              class="action done-btn pulse-button"
+              id="getPhotosBtn"
+              style="display: none"
+            >
+            <img
+              class="whatsappblack"
+              src="assets/svg/whatsappblack.svg"
+              alt=""
+            />
+              <p class="Get_photos">Get photos</p>
+            </button>
+            <button class="action closePopupBtn" id="closePopupBtn">
+              <img src="assets/svg/arrowleft.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="assets/js/mod.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
