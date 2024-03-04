@@ -1,3 +1,4 @@
+let isMirrored = false;
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("#show").addEventListener("click", function () {
     const nameInput = document.getElementById("Enter_your_name").value.trim();
