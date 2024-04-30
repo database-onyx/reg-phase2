@@ -18,5 +18,5 @@ const imageSchema = new mongoose.Schema({
 });
 
 
-const ImageModel = mongoose.model("Event1", imageSchema);
+const ImageModel = mongoose.model("Event2", imageSchema);
 module.exports = ImageModel;
