@@ -54,7 +54,7 @@ app.post("/", async (req, res) => {
   if (pin === "1234") {
     // Redirect to tamilnadu.html
     res.redirect("/tamilnadu");
-  } else if (pin === "4321") {
+  } else if (pin === "3933") {
     // Redirect to kerala.html
     res.redirect("/kerala");
   } else {
