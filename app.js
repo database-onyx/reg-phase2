@@ -51,7 +51,7 @@ app.get("/", (req, res) => {
 // Route for PIN authentication
 app.post("/", async (req, res) => {
   const pin = req.body.pin;
-  if (pin === "3834") {
+  if (pin === "6036") {
     // Redirect to tamilnadu.html
     res.redirect("/tamilnadu");
   } else if (pin === "3933") {
