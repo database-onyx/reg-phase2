@@ -14,7 +14,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: false }));
 
 const dbUrl =
-  "mongodb+srv://pastelframes:Violinwalker%40onyx@dashboard.t299sde.mongodb.net/ssv";
+  "mongodb+srv://billing:Pastelframes%40gmail@cluster0.0d4xp.mongodb.net/ssv";
 
 const connectionParams = {
   useNewUrlParser: true,
@@ -51,9 +51,9 @@ app.get("/", (req, res) => {
 // Route for PIN authentication
 app.post("/", async (req, res) => {
   const pin = req.body.pin;
-  if (pin === "8825") {
+  if (pin === "3933") {
     res.redirect("/thirdeyeportal1");
-  } else if (pin === "3933") {
+  } else if (pin === "7708") {
     res.redirect("/thirdeyeportal2");
   } else {
     // Invalid PIN, redirect back to pin.html
