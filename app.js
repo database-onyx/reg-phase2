@@ -14,7 +14,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: false }));
 
 const dbUrl =
-  "mongodb+srv://pastelframes:Violinwalker%40onyx@dashboard.t299sde.mongodb.net/thirdeye";
+  "mongodb+srv://pastelframes:Violinwalker%40onyx@dashboard.t299sde.mongodb.net/ssv";
 
 const connectionParams = {
   useNewUrlParser: true,
